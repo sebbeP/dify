@@ -245,15 +245,6 @@ services:
       db_postgres:
         condition: service_healthy
         required: false
-      db_mysql:
-        condition: service_healthy
-        required: false
-      oceanbase:
-        condition: service_healthy
-        required: false
-      seekdb:
-        condition: service_healthy
-        required: false
       redis:
         condition: service_started
       agent_backend:
@@ -289,9 +280,6 @@ services:
       db_postgres:
         condition: service_healthy
         required: false
-      db_mysql:
-        condition: service_healthy
-        required: false
       redis:
         condition: service_started
     volumes:
@@ -319,15 +307,6 @@ services:
       init_permissions:
         condition: service_completed_successfully
       db_postgres:
-        condition: service_healthy
-        required: false
-      db_mysql:
-        condition: service_healthy
-        required: false
-      oceanbase:
-        condition: service_healthy
-        required: false
-      seekdb:
         condition: service_healthy
         required: false
       redis:
@@ -359,15 +338,6 @@ services:
       init_permissions:
         condition: service_completed_successfully
       db_postgres:
-        condition: service_healthy
-        required: false
-      db_mysql:
-        condition: service_healthy
-        required: false
-      oceanbase:
-        condition: service_healthy
-        required: false
-      seekdb:
         condition: service_healthy
         required: false
       redis:
@@ -614,15 +584,6 @@ services:
       - ./volumes/plugin_daemon:/app/storage
     depends_on:
       db_postgres:
-        condition: service_healthy
-        required: false
-      db_mysql:
-        condition: service_healthy
-        required: false
-      oceanbase:
-        condition: service_healthy
-        required: false
-      seekdb:
         condition: service_healthy
         required: false
 
